@@ -1,0 +1,37 @@
+%\section{Management du projet}
+
+%(Une introduction partielle)
+
+\section{Terms of reference}
+The \acrlong{df} has developed a data base in agile mode to modernize and digitalize certain business processes. In order to achieve these objectives and develop new Business Intelligence capabilities at the Group level, it is necessary to :
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+    \item review the functional and technical architecture in order to make the data base more robust and scalable but also;
+    \item implement a data governance program to improve data quality.
+\end{itemize}
+\subsubsection{\textbf{Overall objective }}
+%L'objectif g\'en\'eral est de d\'etecter et de corriger les probl\`emes de qualit\'e de donn\'ees dans le cadre du projet socle de donn\'ees de la Digital Factory. La d\'etection se fera \'a l'aide de l'outil Apache Griffin. Il est de ce fait subdiviser en deux volets : le volet outil et le volet correctif.
+
+The general objective of our subject is to evaluate in a first step with the help of Apache Griffin, the quality of the \acrlong{df}'s data. And then to proceed to a correction of the various detected anomalies. It is thus subdivided into two parts:
+a tool component and a detection and correction component.
+\subparagraph{\textbf{> Tool component: Specific objectives}} The purpose of this component is to :
+\begin{enumerate}[parsep=0cm,itemsep=0cm]
+    \item take in hand the data quality audit tool Apache Griffin ;
+    \item establish the connection with the different databases;
+    \item analyze the perspectives offered by this tool.
+\end{enumerate}
+\subparagraph{\textbf{> Detection and correction component: Specific objectives}} The aim here is to use the tool to identify the various data quality problems and, if necessary, propose corrective measures. More specifically, it will be necessary to do:
+\begin{enumerate}[parsep=0cm,itemsep=0cm]
+    \item a review of the different data in the base and detect inconsistencies with the different data and extractions used by the business;
+    \item a prioritization of the main fields to be improved;
+    \item an implementation of data rectification algorithms when possible ;
+    \item possibly an injection of open data to improve the quality of prioritized data.
+\end{enumerate}
+
+\section{Analysis of the existing situation}
+Data quality auditing at the \acrlong{df} is not a new issue. It was done by means of manual exploration of the data and \acrshort{sql} (\acrlong{sql}) queries. This method did not allow for a real industrialisation of the quality assessment and was carried out after the fact. Indeed, it did not offer the possibility of monitoring the evolution of metrics over time, which is very important in the quality management process. Moreover, the absence of a real upstream verification tool for data quality prevents the preventive detection of irregularities. These inconsistencies are only detected at the data enhancement stage, requiring exploration of the data to identify the sources of irregularity. All this has an impact on the productivity and performance of the company. The idea of working on the exploration of a data quality audit tool is at several levels. Firstly, a tool dedicated to data quality would allow it to be easily integrated into the production chain. Secondly, the choice of the tool should correspond to the requirements of the \acrshort{df} in terms of detection and malleability.
+%\subsection{M\'ethode de travail agile}
+%La méthode Agile est une méthodologie de gestion de projet. Il s'agit d'une organisation de travail en cycles courts, permettant aux équipes de développement de gérer un produit de manière souple, adaptative et itérative. Pour cela, elle place le client au cœur du projet et s’adapte tout le long  du projet. De plus, au lieu de planifier le projet de A à Z dès le départ, ce qui laisse peu de place aux imprévus, des objectifs courts sont fixés, par exemple à deux ou trois semaines. Le projet est divisé en sous-projets et l’on ne passe au suivant que lorsque le précédent est réglé. Le principal avantage est la flexibilité, la possibilité de s’adapter en fonction des nouvelles exigences du client ou des évolutions du marché. \\
+%Il existe en réalité plusieurs méthodes qui ont toutes un point commun : elles découlent toutes du Manifeste Agile. Scrum est aujourd’hui l’approche Agile la plus répandue; il s'agit plus précisément d'un cadre m\'ethodologique plut\^ot que d'une m\'ethode. Elle est d'ailleurs celle impl\'ement\'ee par la \acrshort{df}. De plus, Scrum est une pratique Agile élémentaire qui permet également une mise à l’échelle, autrement dit le déploiement progressif de l’agilité à l’échelle de l’entreprise. 
+%Scrum est constitué d'une définition des rôles, de réunions et d'artefacts \cite{Nutcache_agile} \cite{Agiliste_agile}. 
+%\subsection{Organisation et planning du projet (d\'ecrire l'impl\'ementation du scrum dans le cadre du projet et les sprints --Not Yet Done)}
+

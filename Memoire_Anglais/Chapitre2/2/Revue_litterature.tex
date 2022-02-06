@@ -1,0 +1,50 @@
+\section{Literature review }
+
+\subsection{Tools for assessing data quality}
+Quality assessment requires the use of a tool or platform specifically dedicated to this task. Three (3) options are available to companies \cite{linkedinDeepakRout}:
+\begin{description}[parsep=0cm,itemsep=0cm]
+\item[a home-made tool] : this approach requires a huge investment in terms of work. It is suitable for large organisations with a large development team experienced in this task;
+\item[an open source tool]: free of charge, connectivity with most modern data environments and availability of the necessary functionality make it a first choice. The most popular are: Apache Griffin, Deequ, Great Expectations, MobyDQ, Data Validator, Bigdata Profiler;
+\item[a commercial solution]: these are mostly developed by \acrfull{etl} solution providers. And they are best suited to organisations that have already subscribed to a product from the same company.
+\end{description}
+For this study, we chose Apache Griffin because it is a tool that integrates several big data infrastructures, a user interface, a varied connectivity as well as the possibility of receiving alerts by email, and of course it's open source.
+
+\subsection{Sources of non-quality}
+Data quality problems occur when quality requirements are not met.
+More importantly, these problems are caused by several factors or processes:
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+\item manual data entry ;
+\item degradation of data in processing chains and processes;
+\item deliberate or intentional corruption of data for dishonest purposes;
+\item the existence of non-updated data that becomes a source of inaccuracy over time;
+\item the absence of integrity constraints and procedures to maintain data consistency;
+\item the lack of rigour in defining attributes.
+\end{itemize}
+
+\subsection{Different types of anomalies}
+Anomalies in data are very diverse and are caused by several factors. Essentially we have :
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+    \item inconsistency of formats, multiplicity of languages and units of measurement;
+    \item erroneous values, outliers : this type of anomaly is the most frequently encountered. 
+    \item incomplete data or missing values: these are manifested by the partial or total absence of relevant information (or not).
+    \item data duplication: duplicate data is a problem that all companies will have to deal with.
+    \item imprecise data: imprecise data describes the situation where there are difficulties in identifying the true value of the data
+    \item data obsolescence: two aspects are concerned here, the currency of the data with respect to a reference and the age of the data;
+    \item dependencies: these are dependencies between attributes, which are violated or which must be materialised.
+\end{itemize}
+
+
+\subsection{Quality improvement measures}
+
+Data quality is assessed to determine whether the data is appropriate for a specific use, but also to establish the processes necessary to improve it. In terms of corrections several measures and algorithms can be applied, depending on the type of anomaly detected. For the treatment of missing values two approaches are preferred\cite{glassoncicognani}.
+They can either be omitted from the analysis or in the further process, or imputed.  There are several imputation methods: 
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+    \item imputation by rule: when known, a business rule can be used to generate the missing value;
+    \item imputation by mean, median or mode;
+    \item regression imputation: imputation is performed by determining the missing value by the value predicted by the regression model; 
+    \item the nearest neighbours method ;
+    \item imputation using random forests;
+    \item multiple imputation: Multiple imputation consists, as its name suggests, of imputing missing values several times in order to combine the results to reduce the error (noise) due to single imputation.
+\end{itemize}
+As for outliers or erroneous values, Biernat and Lutz \cite{datascience} propose the use of imputation methods to correct these various anomalies, when they are found. When faced with duplication problems, there are two solutions: duplicate data can be systematically deleted or deduplication can be carried out. The use of business rules and choice trees are  preferred for corrections in case of violations of dependencies between attributes. But all these measures are only applicable after the anomaly has occurred. In order to effectively improve data quality, a process approach must also be put in place. The aim of the process approach is to prevent the introduction of erroneous data. 
+

@@ -1,0 +1,48 @@
+%\chapter*{ANNEXE}
+\renewcommand{\thesection}{\Alph{section}}
+\setcounter{section}{0}
+
+\begin{appendices}%\renewcommand{\thesection}{\Alph{section}}
+\pagenumbering{alph}
+\appendixheaderon
+
+\section{Méthode de travail agile : SCRUM}
+\label{ann:annexe1}
+\subsection{Rôles}
+\begin{enumerate}[parsep=0cm,itemsep=0cm]
+\item \textbf{ Le \textit{«Product Owner»} ou \textit{«PO»} }: il porte la vision du produit à réaliser. Il travaille en collaboration directe avec l’équipe de développement et a notamment la charge de remplir le\textit{ «Product Backlog»} et de déterminer la priorité des \textit{«user stories»}\footnote{phrase simple, rédigée dans un langage courant, qui permet de décrire avec suffisamment de précision le contenu d’une fonctionnalité\\} à réaliser. 
+
+\item \textbf{Le \textit{«Scrum Master»} ou \textit{«SM»}} : Il ne faut surtout pas le confondre avec un chef de projet. Il facilite le dialogue et le travail entre les différents intervenants, de façon à ce que l’équipe soit pleinement productive. 
+
+\item \textbf{L’équipe de développement} : généralement composée de 4 à 6 personnes de plusieurs profils, elle est chargée de transformer les besoins exprimés par le \textit{«Product Owner»}  en fonctionnalités réelles, opérationnelles et utilisables. 
+\end{enumerate}
+
+\subsection{Réunions}
+\begin{enumerate}[parsep=0cm,itemsep=0cm]
+\item \textbf{Planification du \textit{Sprint}} (Sprint = itération) : au cours de cette réunion, l'équipe de développement sélectionne les éléments prioritaires du \textit{«Product Backlog»}\footnote{liste ordonnancée des exigences fonctionnelles et non fonctionnelles du projet} qu'elle pense pouvoir réaliser au cours du \textit{Sprint}.
+
+\item \textbf{Revue de Sprint} : au cours de cette réunion qui a lieu à la fin du \textit{Sprint}, l'équipe de développement présente les fonctionnalités terminées au cours du \textit{Sprint} et recueille les feedbacks du \textit{«Product Owner»} et des utilisateurs finaux. C'est également le moment d'anticiper le périmètre des prochains \textit{Sprints} et d'ajuster au besoin la planification de \textit{release} (nombre de \textit{Sprints} restants).
+
+\item \textbf{Rétrospective de \textit{Sprint}} : la rétrospective qui a généralement lieu après la revue de \textit{Sprint} est l'occasion de s'améliorer (productivité, qualité, efficacité, conditions de travail, etc) à la lueur du "vécu" sur le \textit{Sprint} écoulé (principe d'amélioration continue).
+
+\item \textbf{Mêlée quotidienne}  : il s'agit d'une réunion de synchronisation de l'équipe de développement qui se fait debout en 15 minutes maximum au cours de laquelle chacun répond principalement à 3 questions : \textit{«Qu'est ce que j'ai terminé depuis la dernière mêlée ? Qu'est ce que j'aurai terminé d'ici la prochaine mêlée ? Quels obstacles me retardent ?»}.
+\end{enumerate}
+
+\subsection{Artefacts}
+\begin{enumerate}[parsep=0cm,itemsep=0cm]
+\item \textbf{Le \textit{Sprint}}: il s'agit d'une période pendant laquelle un travail spécifique doit être mené à bien avant de faire l'objet d'une révision.
+\item \textbf{Le \textit{Product Backlog}}: il s'agit d'une liste hiérarchisée des exigences initiales du client concernant le produit à réaliser.
+\item \textbf{Le \textit{Sprint Backlog}}: c'est le plan détaillé de la réalisation de l'objectif du \textit{Sprint}, défini lors de la réunion de planification du \textit{Sprint}.
+\item \textbf{Le \textit{Task Board}} : outil central du \textit{Sprint} scrum, ce tableau de bord du projet permet de suivre en temps réel la progression de la réalisation des différentes tâches. Il pr\'esente les tâches à faire, les tâches en cours et les tâches terminées.
+\item \textbf{Le \textit{Burndown Chart}} : il s’agit d’un graphique simple permettant de visualiser le degré d’avancement de chacune des tâches.
+\end{enumerate}
+
+\end{appendices}
+
+\section{Compl\'ement sur les distances}
+On retiendra essentiellement \cite{bensalem}:
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+\item pour les mesures impliquant des chaînes de caractères on a les mesures lexicographiques (distances Levenshtein, distance Q-gram, distance de Jaro-Winkler) et les mesures phon\'etiques (Soundex, Double Metaphore, New York State Identification and Intelligence System, une combinaison des mesures phon\'etique et lexicographique);
+\item pour les donn\'ees num\'eriques une transformation en chaînes de caractères peut \^etre appliqu\'ee;
+\item pour les dates on peut effectuer un calcul de différence entre les jours, les mois et les années
+\end{itemize} 

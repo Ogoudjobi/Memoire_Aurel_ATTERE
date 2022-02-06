@@ -1,0 +1,60 @@
+\section{Management du projet}
+
+%(Une introduction partielle)
+
+\subsection{Cahier de charges}
+Les données prennent une place de plus en plus importante dans les prises de décisions des entreprises. Afin de réunir les conditions nécessaires à une exploitation saine de ces données, une strat\'egie claire de gouvernance des donn\'ees (\textit{data gouvernance}) est fondamentale. La gouvernance des donn\'ees a pour rôle de s’assurer de la qualité et de la sécurité des données au sein d’une organisation. Pour cela, elle détermine un ensemble de processus, rôles, règles, normes et métriques permettant d’assurer une utilisation efficace et efficiente des informations, dans le but d’aider les entreprises à atteindre leurs objectifs.\\
+
+% La qualit\'e est bien souvent à l'origine de la plupart des activités de gouvernance des données. Ainsi le projet objet de notre m\'emoire s'inscrit dans une perspective plus globale de gouvernance des donn\'ees .  \\ 
+
+La \acrlong{df} a développé un socle de données en mode agile pour moderniser et digitaliser certains processus métiers ainsi que pour développer de nouveaux usages (application client…). Afin d'atteindre ces objectifs et d\'evelopper de nouvelles capacités de la \textit{Business Intelligence} au niveau Groupe, il est nécessaire de:
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+\item revoir l’architecture fonctionnelle et technique afin de rendre le socle de donn\'ees plus robuste et scalable mais aussi;
+\item mettre en place un programme de gouvernance des données pour améliorer la qualité des données.
+\end{itemize}
+
+Avant de d\'eployer un tel programme de gouvernance à l’échelle du Groupe, une phase pilote au sein de la \acrshort{df} a pour objectif de tester :
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+\item l'organisation (les rôles et les responsabilités);
+\item les processus (les livrables et instance de pilotage);
+\item les technologies (les outils de collecte, de stockage, de visualisation, de documentation et de qualit\'e).
+\end{itemize}
+Ainsi le projet faisant l'objet de notre m\'emoire s'inscrit dans une perspective plus globale de gouvernance des donn\'ees.
+
+\subsubsection{\textbf{Objectif g\'en\'eral}}
+%L'objectif g\'en\'eral est de d\'etecter et de corriger les probl\`emes de qualit\'e de donn\'ees dans le cadre du projet socle de donn\'ees de la Digital Factory. La d\'etection se fera \'a l'aide de l'outil Apache Griffin. Il est de ce fait subdiviser en deux volets : le volet outil et le volet correctif.
+
+L'objectif g\'en\'eral de notre sujet est d'évaluer dans un premier temps à l’aide d’Apache Griffin, la qualité de données du socle de données. Et ensuite de proc\'eder \`a une correction des diff\'erentes anomalies d\'etect\'ees. Il est de ce fait subdivis\'e en deux volets : un volet outil et un volet d\'etection et correction.
+
+\paragraph{\textbf{> Volet outil: Objectifs sp\'ecifiques } }
+Il s'agit pour ce volet de :
+\begin{enumerate}[parsep=0cm,itemsep=0cm]
+\item prendre en main l'outil d'audit de la qualit\'e des donn\'ees Apache Griffin;
+\item \'etablir la connexion avec les diff\'erentes bases de donn\'ees de l'\'equipe socle de donn\'ees;
+\item faire une analyse des perspectives qu'offre cet outil.
+\end{enumerate}
+
+\paragraph{\textbf{> Volet d\'etection et correction : Objectifs sp\'ecifiques }}
+Il  s'agira ici de se servir de l'outil pour identifier les diff\'erents probl\`emes de qualit\'e de donn\'ees et le cas \'ech\'eant proposer des mesures de redressement. Plus précisément, il faudra faire:
+\begin{enumerate}[parsep=0cm,itemsep=0cm]
+\item une revue des diff\'erentes donn\'ees du socle et d\'etecter les incoh\'erences par rapport aux diff\'erentes donn\'ees et extractions utilis\'ees par le m\'etier; 
+\item une priorisation des principaux champs \`a mettre en qualit\'e; %en urgence; 
+\item une impl\'ementation d'algorithmes de redressement des donn\'ees quand cela est possible; 
+\item \'eventuellement une injection d'open data pour une mise en qualit\'e des donn\'ees prioris\'ees.
+\end{enumerate}
+
+\subsection{Analyse de l'existant}
+
+L'audit de la qualit\'e des donn\'ees \`a la \acrlong{df} n'est pas une probl\'ematique nouvelle. Elle se faisait au moyen d'exploration manuelle dans les donn\'ees et de requ\^ete SQL (\acrlong{sql}). Cette mani\`ere de proc\'eder ne permettait pas une r\'eelle industrialisation de l'\'evaluation de la qualit\'e et \'etait effectu\'ee apr\`es constat. En effet, elle n'offrait notamment pas la possibilit\'e de surveiller l'\'evolution des m\'etriques dans le temps ce qui est tr\`es important dans le processus de gestion de la qualit\'e. De plus, l'absence d'un r\'eel outil de v\'erification en amont de la qualit\'e des donn\'ees, emp\^eche la d\'etection pr\'eventive d'irr\'egularit\'es dans les donn\'ees telles que la pr\'esence d'incoh\'erences dans les calculs de la prime ou de la charge, les incoh\'erences dans la détermination de la nature du sinistre, des difficult\'es dans la r\'ealisation de regroupement fiable ou m\^eme des difficult\'es dans l'\'etablissement de plan de tarification intelligent. Ces incoh\'erences ne sont d\'etect\'ees qu'\`a la phase de mise en valeur des donn\'ees, n\'ecessitant une exploration dans les donn\'ees afin d'identifier les sources d'irr\'egularit\'e. Tout ceci provoque un impact sur la productivit\'e et la performance de l'entreprise. \\
+
+L’idée de travailler sur l'exploration d'un outil d'audit de la qualit\'e des donn\'ees se situe \`a plusieurs niveaux. Premièrement, un outil d\'edi\'e \`a la qualit\'e des donn\'ees permettrait de facilement l'int\'egrer dans la chaîne de production. Ensuite, le choix de l'outil devra correspondre aux exigences de la \acrshort{df} en terme de d\'etection et de mall\'eabilit\'e.  
+%aux incoh\'erences rencontr\'ees dans le calcul des primes et aux difficult\'es dans la r\'ealisation de regroupement fiable, le besoin s'est fait ressentir de mettre en place un outil permettant d'industrialiser la gestion de la qualit\'e des donn\'ees . Cet outil viendra remplacer les tests manuels (SQL) et les explorations effectu\'ees sans industrialisation.
+
+\subsection{M\'ethode de travail agile}
+La méthode Agile est une méthodologie de gestion de projet. Il s'agit d'une organisation de travail en cycles courts, permettant aux équipes de développement de gérer un produit de manière souple, adaptative et itérative. Pour cela, elle place le client au cœur du projet et s’adapte tout le long  du projet. De plus, au lieu de planifier le projet de A à Z dès le départ, ce qui laisse peu de place aux imprévus, des objectifs courts sont fixés, par exemple à deux ou trois semaines. Le projet est divisé en sous-projets et l’on ne passe au suivant que lorsque le précédent est réglé. Le principal avantage est la flexibilité, la possibilité de s’adapter en fonction des nouvelles exigences du client ou des évolutions du marché. \\
+
+Il existe en réalité plusieurs méthodes qui ont toutes un point commun : elles découlent toutes du Manifeste Agile. Scrum est aujourd’hui l’approche Agile la plus répandue; il s'agit plus précisément d'un cadre m\'ethodologique plut\^ot que d'une m\'ethode. Elle est d'ailleurs celle impl\'ement\'ee par la \acrshort{df}. De plus, Scrum est une pratique Agile élémentaire qui permet également une mise à l’échelle, autrement dit le déploiement progressif de l’agilité à l’échelle de l’entreprise. 
+Scrum est constitué d'une définition des rôles, de réunions et d'artefacts \cite{Nutcache_agile} \cite{Agiliste_agile}. 
+
+%\subsection{Organisation et planning du projet (d\'ecrire l'impl\'ementation du scrum dans le cadre du projet et les sprints --Not Yet Done)}
+

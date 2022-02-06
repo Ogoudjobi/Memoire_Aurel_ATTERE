@@ -1,0 +1,17 @@
+\documentclass{report}
+\usepackage{etoolbox}
+\makeatletter
+\newcommand{\extraPartText}[1]{\def\@extraPartText{#1}}
+\pretocmd{\@endpart}{\vspace{8ex}\begingroup\centering\@extraPartText\par\endgroup\let\@extraPartText\relax}{}{}
+\makeatother
+\begin{document}
+\tableofcontents
+\extraPartText{Always be friendly to ducks, capybaras and wombats.}
+\part{Wombat}
+
+\chapter{Duck}
+zzz
+
+\part{Mara}
+
+\end{document}

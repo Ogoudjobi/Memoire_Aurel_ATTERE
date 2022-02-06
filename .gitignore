@@ -1,0 +1,6 @@
+*.log
+*.aux
+*.blg
+*.bbl
+*.synctex(busy)
+*.synctex

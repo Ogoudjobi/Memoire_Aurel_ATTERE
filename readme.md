@@ -1,0 +1,1 @@
+Derniere version du memoire de fin de formation pour l'obtention du master en Data Science Big Data et Intelligence Artificielle. Il porte sur le sujet suivant : Detection et correction des problemes de qualite de donnees de la Digitak Factory de Saham Assurance Maroc

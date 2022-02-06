@@ -1,0 +1,457 @@
+\documentclass[12pt, a4paper, final]{report}
+\usepackage[numbers]{natbib}
+\usepackage[T1]{fontenc}
+\usepackage{animate}
+\usepackage{import}
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pifont}
+\usepackage{booktabs}
+%\usepackage{wrapfig}
+\usepackage{shorttoc}
+
+\usepackage[french]{babel}
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Pseudo code}% Listing -> Algorithm
+%\renewcommand{\lstlistlistingname}{List of \lstlistingname s}
+\usepackage{xcolor}
+\usepackage{bera}% optional: just to have a nice mono-spaced font
+\usepackage{lipsum}
+\usepackage{fancybox}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{newcent}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[bookmarks,hypertexnames=false,debug]{hyperref}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+%\usepackage{natbib}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{subfigure}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[sc, big]{titlesec}
+\usepackage[Conny]{fncychap}%Glenn- Rejne* Conny Sonny Lenny- Bjarne Bjornstrup
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{0pt}% <------------- changemeent ici (était 50pt avant)
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 040920
+        \DOCH
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 060424
+      \DOTI{#1}%
+    \else%
+      \DOTIS{#1}%
+    \fi
+  }}
+\makeatother
+\usepackage{supertabular} % tableaux qui tiennent sur plusieurs pages
+
+%\titlespacing{\chapter}{0pt}{*-5}{*5}
+\usepackage{dirtytalk}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={D\'etection avec Apache Griffin et correction des problèmes de qualité dans le cadre du projet socle de données de la Digital Factory de Saham Assurance Maroc },
+    citecolor = green,
+    pdfauthor= {Aurel C\'ephas Ogoudjobi ATTERE},
+   % pdfpagemode=FullScreen,
+    }\setlength{\parskip}{0.1cm}
+\setlength{\parindent}{0pt}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{etoolbox}
+\frenchbsetup{StandardLists=true} % à inclure si on utilise \usepackage[french]{babel}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage{courier}
+%\usepackage[acronym]{glossaries}
+
+
+%\usepackage{geometry}
+%\geometry{hmargin=1.5cm,vmargin=2.5cm}
+
+
+%% Format JSON
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+\definecolor{string}{rgb}{0.64,0.08,0.08}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily\scriptsize,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=4pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+%\lstdefinelanguage{SQL}{
+%    showspaces=false, 
+%    basicstyle=\scriptsize,
+%    numbers=none,
+%    commentstyle=\color{green},
+%    backgroundcolor=\color{background},
+%    literate=
+%     *{0}{{{\color{numb}0}}}{1}
+%      {1}{{{\color{numb}1}}}{1}
+%      {2}{{{\color{numb}2}}}{1}
+%      {3}{{{\color{numb}3}}}{1}
+%      {4}{{{\color{numb}4}}}{1}
+%      {5}{{{\color{numb}5}}}{1}
+%      {6}{{{\color{numb}6}}}{1}
+%      {7}{{{\color{numb}7}}}{1}
+%      {8}{{{\color{numb}8}}}{1}
+%      {9}{{{\color{numb}9}}}{1}
+%      {:}{{{\color{punct}{:}}}}{1}
+%      {,}{{{\color{punct}{,}}}}{1}
+%      {\{}{{{\color{delim}{\{}}}}{1}
+%      {\}}{{{\color{delim}{\}}}}}{1}
+%      {[}{{{\color{delim}{[}}}}{1}
+%      {]}{{{\color{delim}{]}}}}{1},
+%}
+
+
+%%
+ 
+ %%% Short TOC %%%%
+ 
+ %\renewcommand*\contentsname{Table des matières}
+
+ 
+\newcommand\MyBox[2]{
+	\fbox{\lower0.75cm
+		\vbox to 1.7cm{\vfil
+			\hbox to 1.7cm{\hfil\parbox{1.7cm}{#1\\#2}\hfil}
+			\vfil}
+	}
+}
+\usepackage{setspace}
+\onehalfspacing
+\newcommand{\bigdata}{\textit{big data }}
+
+
+%\usepackage{tocloft}
+%\renewcommand\cftpartfont{\HUGE\bfseries}
+%\renewcommand\cftsecfont{\large}
+
+%\renewcommand\cftchappagefont{\LARGE\bfseries}
+%\renewcommand\cftsecpagefont{\LARGE}
+
+\usepackage{caption}
+\captionsetup{justification=raggedright,singlelinecheck=false}
+
+\usepackage{titling}
+
+\usepackage{diagbox}
+\usepackage{float}
+\usepackage[para]{footmisc}
+\renewcommand{\thefootnote}{% 
+	\texttt{(\arabic{footnote})}}
+
+%\titlespacing*{\chapter}{0cm}{-\topskip}{0pt}[0pt]
+
+\usepackage[acronym,toc,nogroupskip]{glossaries}
+%\makenoidxglossaries nopostdot,nogroupskip,style=super,nonumberlist,toc,automake,toc
+
+\usepackage{lipsum}
+\makeatletter
+
+	\let\old@endpart\@endpart
+\renewcommand\@endpart[1][]{%
+	\begin{quote}#1\end{quote}%
+	\old@endpart}
+
+\hyphenation{con-cou-rent}
+%\rhead{\includegraphics[width=1cm]{example-image-a}}
+
+%\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{ \flushright \scriptsize \hspace{1.5cm} D\'etection avec Apache Griffin et correction des problèmes de qualité de donn\'ees dans le cadre du projet socle de données de la Digital Factory de Saham Assurance Maroc }
+\lhead{ \includegraphics[scale=0.10, height= 0.75cm]{Static/sanlam.jpeg}}
+\lfoot{\scriptsize Aurel C\'ephas Ogoudjobi ATTERE}
+\rfoot{\scriptsize Page \thepage}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[L]{ \includegraphics[scale=0.10, height= 0.75cm]{Static/sanlam.jpeg}}
+  \fancyhead[R]{ \flushright \scriptsize \hspace{1.5cm} D\'etection avec Apache Griffin et correction des problèmes de qualité de donn\'ees dans le cadre du projet socle de données de la Digital Factory de Saham Assurance Maroc }
+  \fancyfoot[L]{\scriptsize Aurel C\'ephas Ogoudjobi ATTERE}%
+  \fancyfoot[R]{\scriptsize Page \thepage}%
+  \renewcommand{\headrulewidth}{0.4pt}% Line at the header invisible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
+
+%%%%%%%%%%%%%%%% Tableau
+\usepackage{lscape}
+\usepackage{chngpage}
+\usepackage[export]{adjustbox}
+%\usepackage[table]{xcolor}
+\usepackage{rotating}
+\usepackage{tikz}
+
+
+\newcommand\justify{%
+  \let\\\@centercr
+  \rightskip\z@skip
+  \leftskip\z@skip}
+\makeatother
+
+%%%%%%%%%%%%% Tableau
+\usepackage{longtable}
+
+%%% PART %%%
+%\usepackage{lettrine}
+
+%\usepackage{libertine}
+\makeatletter
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+  \reset@font
+  \parindent \z@ 
+  \vspace*{5\p@}%
+  \hbox{%
+    \vbox{%
+      \hsize=7mm%
+      \begin{tabular}{@{}p{7mm}@{}}
+        \makebox[7mm]{\scshape\strut\small\partname}\\
+        \makebox[7mm]{\cellcolor{black}\Huge\color{white}\bfseries\strut\thepart\rule[-4cm]{0pt}{4cm}}%
+      \end{tabular}%
+      \makebox(0,0){\put(-10,-100){\fbox{\phantom{\rule[-4cm]{7mm}{4cm}}}}}
+      }%
+    \kern-2pt
+    \vbox to 0pt{%
+       \tabular[t]{@{}p{1cm}p{\dimexpr\hsize-2.1cm}@{}}\hline
+          & \Huge\itshape\rule{0pt}{1.5\ht\strutbox}#1\endtabular}%
+    }%
+  \cleardoublepage
+%  \vskip 100\p@
+}
+
+
+\makeatother
+
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother  
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+
+\newlist{Token}{enumerate}{2}
+\setlist[Token,1]{label=Token \arabic*:}
+%\setlist[exo,2]{label=Question \alph*)}
+  
+
+\usepackage[toc,page,title,titletoc,header]{appendix} % pour les annexes
+\renewcommand\appendixname{\chapter{Annexe}}
+\renewcommand{\appendixtocname}{\large ANNEXE} % indique le nom de la table des annexes dans la toc
+\renewcommand{\appendixpagename}{\appendixname} % Nom du titre de la page des annexes
+\usepackage{etoolbox}
+%\AtBeginEnvironment{appendices}{\renewcommand{\thesection}{\Alph{section}}}
+
+
+\makenoidxglossaries
+
+%%%%%%%%%%%%%%%%%%% ACRONYMS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newacronym{sql}{SQL}{\textit{Structured Query Language}}
+\newacronym{spa}{SPA}{Sanlam Pan-Africa}
+\newacronym{mcar}{MCAR}{\textit{Missing Completly At Random}}
+\newacronym{mnar}{MNAR}{\textit{Missing Not At Random}}
+\newacronym{mar}{MAR}{\textit{Missing At Random}}
+\newacronym{ui_ux}{UI/UX}{\textit{User Interface/User Experience}}
+\newacronym{mit}{MIT}{\textit{Massachusetts Institute of Technology}}
+\newacronym{iso}{ISO}{\textit{International Organization for Standardization}}
+\newacronym{niss}{NISS}{\textit{National Institute of Statistical Sciences}}
+\newacronym{dama}{DAMA UK}{\textit{Data Administration Management Association of United Kingdom}}
+\newacronym{nan}{NaN}{\textit{Not a Number}}
+\newacronym{etl}{ETL}{\textit{Extract-Transform-Load}}
+\newacronym{iu}{IU}{Interface Utilisateur}
+\newacronym{ui}{UI}{User Interface}
+\newacronym{aws}{AWS}{\textit{Amazon Web Service}}
+\newacronym{jdbc}{JDBC}{\textit{Java DataBase Connectivity}}
+\newacronym{hdfs}{HDFS}{\textit{Hadoop Distributed File System}}
+\newacronym{json}{JSON}{\textit{JavaScript Object Notation}}
+\newacronym{api}{API}{\textit{Application Programming Interface}}
+\newacronym{http}{HTTP}{\textit{HyperText Transfer Protocol}}
+\newacronym{rest}{REST}{\textit{REpresentational State Transfer}}
+\newacronym{jdk}{JDK}{\textit{Java Development Kit}}
+\newacronym{ram}{RAM}{\textit{Random Access Memory}}
+\newacronym{hdd}{HDD}{\textit{Hard Disk Drive}}
+\newacronym{ssd}{SSD}{\textit{Solid State Drive}}
+\newacronym{cpu}{CPU}{\textit{Central Processing Unit}}
+\newacronym{lts}{LTS}{\textit{Long-Term Support}}
+\newacronym{yaml}{YAML}{\textit{Yet Another Markup Language}}
+\newacronym{cors}{CORS}{\textit{Cross-Origin Resource Sharing}}
+\newacronym{ip}{IP}{\textit{Internet Protocol}}
+\newacronym{csv}{CSV}{\textit{Comma-Separated Values}}
+\newacronym{tsv}{TSV}{\textit{Tabulation-Separated Values}}
+\newacronym{orc}{ORC}{\textit{Optimized Row Columnar}}
+\newacronym{bash}{bash}{\textit{bourne-again shell}}
+\newacronym{fmp}{FMP}{Frais M\'edicaux et Pharmaceutiques}
+\newacronym{ipp}{IPP}{Incapacité Permanente Partielle}
+\newacronym{po}{PO}{Product Owner}
+\newacronym{sm}{SM}{Scrum Master}
+\newacronym{df}{DF}{Digital Factory}
+\newacronym{em}{EM}{\textit{Expectation-Maximisation}}
+\newacronym{idsi}{IDSI}{International Data Science Institute }
+\newacronym{inp}{INP-HB}{Institut National Polytechnique Félix Houphouet-Boigny}
+\newacronym{ensea}{ENSEA}{\'Ecole Nationale Supérieure de Statistique et d’Economie Appliquée}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\chapitre#1{\chapter{#1}\newpage}
+\usepackage{titlesec}
+\usepackage{longtable}
+
+%\usepackage{titlesec, blindtext, color}
+%\definecolor{gray75}{gray}{0.75}
+%\newcommand{\hsp}{\hspace{20pt}}
+%\titleformat{\chapter}[hang]{\Large\bfseries}{Chapitre \thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Large\bfseries}
+
+
+\titlespacing{\chapter}{0pt}{-32pt}{1cm}% <-- CHANGE DONE HERE!!
+\pagenumbering{roman}
+
+
+%\renewcommand{\listtablename}{My nice list of table}
+
+\setcounter{tocdepth}{5}
+
+\usepackage{etoolbox}
+\makeatletter
+\pretocmd{\part}{\addtocontents{toc}{\protect\addvspace{-20\p@}}}{}{}
+\pretocmd{\chapter}{\addtocontents{toc}{\protect\addvspace{-10\p@}}}{}{}
+\pretocmd{\section}{\addtocontents{toc}{\protect\addvspace{0\p@}}}{}{}
+\makeatother
+
+\begin{document}
+
+%\includepdf{../Page_de_garde/Page de garde V2 Aurel}
+\includepdf{../Page_de_garde/PageDeGardeAurelV3}
+\includepdf{../Page_de_garde/PageDeGardeAurelV3}
+%\includepdf{../Page_de_garde/Aurel_fr_signature_page-0001-1-ConvertImage}
+%\tableofcontents
+\addto\captionsfrench{\def\tablename{{Tableau }}}
+%\addto\captionsfrench{\def\listingname{{Script }}}
+
+\selectlanguage{french}
+%Dedicace
+\input{../Dedicace/Dedicace}
+%Remerciements
+\input{../Remerciements/Remerciements}
+%\doublespacing
+%\addtocontents{toc}{\itshape}
+\renewcommand{\contentsname}{Table des matières}
+%\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Sommaire}
+\shorttoc{SOMMAIRE}{1}
+%\singlespacing
+
+%Liste des tableaux
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+%Liste des illustrations
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Liste des figures}
+\renewcommand{\listfigurename}{Liste des figures}
+\listoffigures
+
+%Sigles et abreviations
+%\clearpage
+\printnoidxglossary[type=acronym, title=Sigles et abr\'eviations, toctitle=Sigles et abr\'eviations]
+\printglossary[type=\acronymtype]
+
+\printglossary
+%Avant-Propos
+\input{../Avant-Propos/Avant_Propos}
+%\input{../Sigles_Abreviation/Sigle_Abreviations}
+%Resume - Abstract
+\newpage
+\input{../Resume_Abstract/Resume_Abstract}
+
+%Introduction Generale
+\input{../Introduction_Gene/Introduction_Generale}
+
+%\Partie 1 
+\part{\normalfont \LARGE CADRE INSTITUTIONNEL ET TH\'EORIQUE DE L'\'ETUDE}
+%Chapitre1
+\input{../Chapitre1/Chapitre1}
+%Chapitre2
+\input{../Chapitre2/Chapitre2}
+
+%\Partie 2
+\part{\normalfont \LARGE PR\'ESENTATION DES R\'ESULTATS}
+%Chapitre3
+\input{../Chapitre3/Chapitre3}
+%Chapitre4
+\input{../Chapitre4/Chapitre4}
+
+
+%Conclusion Generale
+\input{../Conclusion_Gene/Conclusion_Generale}
+%Bibliographie
+\input{../Bibliographie/Bibliographie}
+%Annexe
+\input{../Annexe/Annexe}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Table des matières}
+\tableofcontents
+
+\end{document}

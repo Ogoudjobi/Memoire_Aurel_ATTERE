@@ -1,0 +1,211 @@
+\documentclass[12pt,a4paper, fleqn]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{eso-pic}
+\usepackage{amsmath}
+\usepackage[Glenn]{fncychap}%Glenn Rejne* Conny Sonny* Lenny Bjarne
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{color}
+\usepackage[absolute]{textpos}
+
+\definecolor{darkWhite}{rgb}{0.94,0.94,0.94}
+
+\lstset{
+  aboveskip=3mm,
+  belowskip=-2mm,
+  backgroundcolor=\color{darkWhite},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{red},
+  deletekeywords={...},
+  escapeinside={\%*}{*)},
+  extendedchars=true,
+  framexleftmargin=16pt,
+  framextopmargin=3pt,
+  framexbottommargin=6pt,
+  frame=tb,
+  keepspaces=true,
+  keywordstyle=\color{blue},
+  language=Python,
+  literate=
+  {²}{{\textsuperscript{2}}}1
+  {⁴}{{\textsuperscript{4}}}1
+  {⁶}{{\textsuperscript{6}}}1
+  {⁸}{{\textsuperscript{8}}}1
+  {€}{{\euro{}}}1
+  {é}{{\'e}}1
+  {è}{{\`{e}}}1
+  {ê}{{\^{e}}}1
+  {ë}{{\¨{e}}}1
+  {É}{{\'{E}}}1
+  {Ê}{{\^{E}}}1
+  {û}{{\^{u}}}1
+  {ù}{{\`{u}}}1
+  {â}{{\^{a}}}1
+  {à}{{\`{a}}}1
+  {á}{{\'{a}}}1
+  {ã}{{\~{a}}}1
+  {Á}{{\'{A}}}1
+  {Â}{{\^{A}}}1
+  {Ã}{{\~{A}}}1
+  {ç}{{\c{c}}}1
+  {Ç}{{\c{C}}}1
+  {õ}{{\~{o}}}1
+  {ó}{{\'{o}}}1
+  {ô}{{\^{o}}}1
+  {Õ}{{\~{O}}}1
+  {Ó}{{\'{O}}}1
+  {Ô}{{\^{O}}}1
+  {î}{{\^{i}}}1
+  {Î}{{\^{I}}}1
+  {í}{{\'{i}}}1
+  {Í}{{\~{Í}}}1,
+  morekeywords={*,...},
+  numbers=left,
+  numbersep=10pt,
+  numberstyle=\tiny\color{black},
+  rulecolor=\color{black},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  stringstyle=\color{gray},
+  tabsize=4,
+  title=\lstname,
+} 
+ 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
+\newcommand\AtUpperLeftCorner[3]{%
+  \put(\LenToUnit{#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{#3}}%
+}
+\newcommand\AtUpperRightCorner[3]{%
+  \put(\LenToUnit{\dimexpr\paperwidth-#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{\llap{#3}}}%
+}
+ 
+\title{\Large{FORMATION : INITIATION AUX M\'ETIERS DE LA DATA}}
+\author{\textsc{Inner Planning Engineers} 
+ \vspace*{1cm} 
+
+{\textsc{DEV'TEAM}} \\  \textbf{\textsc{Junior Data Science Consulting (JDSC)}} \\ \vspace*{1cm} 
+    
+ }
+\date{}
+
+\makeatletter
+ 
+
+\begin{document}
+
+
+
+\ClearShipoutPicture
+%\tableofcontent
+\chapter*{PLAN V1}
+
+DEDICACES\\
+REMERCIEMENTS\\
+SOMMAIRE\\
+LISTE DES TABLEAUX\\
+LISTE DES FIGURES\\
+SIGLES ET ABREVIATIONS\\
+AVANT-PROPOS\\
+RESUME -ABSTRACT\\
+INTRODUCTION GENERALE\\
+PARTIE 1: PRESENTATION DE L'ENVIRONNEMENT DE STAGE 
+\begin{itemize}
+\begin{itemize}
+\begin{itemize}
+\item[Chapitre 1:] Pr\'esentation de la structure d'accueil
+\item[Chapitre 2:] Pr\'esentation du sujet d'\'etude
+\begin{enumerate}
+\item Contexte
+\item Cahier de charges
+\item Pr\'esentation de l'existant \`a Saham
+\item Chronogramme
+\end{enumerate}
+\end{itemize}
+\end{itemize}
+\end{itemize}
+PARTIE 2: ANALYSE CONCEPTION ET CHOIX TECHNOLOGIQUE
+\begin{itemize}
+\begin{itemize}
+\begin{itemize}
+\item[Chapitre 1:] Cadre conceptuel de la qualit\'e
+\item[Chapitre 2:] Revue empirique et technologique
+\item[Chapitre 3:] Choix technologique
+\end{itemize}
+\end{itemize}
+\end{itemize}
+PARTIE 3: DEPLOIEMENT ET EXPLOITATION DE LA SOLUTION
+\begin{itemize}
+\begin{itemize}
+\begin{itemize}
+\item[Chapitre 1:] D\'eploiment de Apache Griffin
+\item[Chapitre 2:] D\'etection et correction des probl\`emes de qualit\'e
+\end{itemize}
+\end{itemize}
+\end{itemize}
+CONCLUSION GENERALE
+
+\chapter*{PLAN}
+DEDICACES\\
+REMERCIEMENTS\\
+SOMMAIRE\\
+LISTE DES TABLEAUX\\
+LISTE DES FIGURES\\
+SIGLES ET ABREVIATIONS\\
+AVANT-PROPOS\\
+RESUME -ABSTRACT\\
+INTRODUCTION GENERALE\\
+\textbf{Chapitre 1 :}\\
+
+1.Cadre contextuel\\
+1-1 Qualité de données dans un secteur de l'assurance (une sorte de problématique)\\
+1-2 Présentation de l'organisme d’accueil\\
+
+2- Méthodologie de recherche\\                                          
+2-1 : Objectifs de la recherche\\
+2-2:  Questions de recherche\\
+2-3 : Méthodes de la recherche\\
+2-4 : Valeur du travail (intérêts de l’étude)\\
+
+3- Etude de l'existant\\
+3-1 : Analyse de l'existant\\
+3-2 : Etude du besoin\\
+
+4- Management du projet\\                                                                 
+4-1 Objectif du projet\\
+4-2 Choix de la méthode Agile\\
+4-3 : Organisation du projet\\
+4-4 : Planning du projet\\ \\
+\newpage
+.\\
+\textbf{Chapitre 2:} \\
+
+1-Background (On trouvera un nom plus esthétique)
+
+2-Etat de l'art\\ \\
+\textbf{Chapitre 3:}\\ 
+
+1- Cadre conceptuel de la qualité
+
+2- Revue empirique et technologique
+
+3- Choix technologique\\ \\
+\textbf{Chapitre 4:}\\
+
+1- Déploiement de Apache Griffin
+
+2- Détection et correction des problèmes de qualité\\
+CONCLUSION GENERALE\\
+BIBLIOGRAPHIE\\
+ANNEXE\\
+\end{document}

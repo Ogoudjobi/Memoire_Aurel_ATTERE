@@ -1,0 +1,18 @@
+La qualité de ces données représente un enjeu important. Le coût de la non-qualité peut en effet s’avérer très élevé : prendre une décision à partir de mauvaises informations peut nuire à l’orga-
+nisation, à ses clients ou ses partenaires. La gouvernance des données est un sujet qui prend de l’importance dans les entreprises et les administrations.
+
+De plus en plus d’entreprises tentent de capitaliser sur leurs données métier les plus importantes en construisant des référentiels de type MDM (Master Data Management) offrant une vue centrale et unique de ces dernières.
+
+De nombreuses méthodes pour identifier, mesurer et résoudre certains problèmes de qualité des données existent. Les outils proposés ne répondent pas encore à tous les problèmes soulevés. Ils se focalisent le plus souvent uniquement sur la donnée brute et non sur la signification de celle-ci. Or la donnée, pour être utile, doit être interprétée dans son contexte d’utilisation.
+
+
+Alors que les ETL (Extract 1 , Transform 2 , Load 3 ) ont atteint, de nos jours, un grand degré de maturité et offrent de très nombreux composants, les résultats d’intégration des données contiennent beaucoup trop d’anomalies et n’inspirent pas confiance afin d’aider à la prise de décision.
+
+Les fonctionnalités de qualité des données peuvent évoluer afin de gérer toutes les données, du fichier plat aux données d’entreprise dans Hadoop. Talend permet de tirer parti des meilleures fonctionnalités de la plateforme pour fournir une qualité des données continue à travers différents types de données et quel que soit le volume de données.
+
+Le but est d’obtenir des données sans doublons, sans fautes d’orthographes, sans omission, sans variation superflue et conforme à la structure définie. Les données sont dites de qualité si elles satisfont aux exigences de leurs utilisateurs. En d’autres termes, la qualité des données dépend autant de leur utilisation que de leur état. Pour satisfaire à l’utilisation prévue, les données doivent être exactes, opportunes et pertinentes, complètes, compréhensibles et dignes de confiance (Toulemonde, 2008).
+
+
+A titre indicatif, plusieurs études menées aux États-Unis dans des secteurs divers tels que banques, assurances ou agences de voyage font état d’un taux d’erreur de 5 % à 30 % dans les BDs (ce taux étant, par exemple, évalué sur la base du rapport entre le nombre d’enregistrements contenant au moins une erreur logique et le nombre total d’enregistrements d’une BD). En termes financiers, les coûts de la “non-qualité” sont évalués à une perte d’environ 5 à 10 % du revenu des entreprises examinées. Citons par exemple les coûts en contrôles, correction et maintenance de données de qualité douteuse, les coûts liés au traitement des plaintes des clients non satisfaits ou encore à la réparation des préjudices (Boydens, 1998). Une étude aux États-Unis, a estimé le coût de la mauvaise qualité des données à plus de 600 milliards de dollars pour les entreprises chaque année (Toulemonde, 2008).
+
+Les préoccupations stratégiques pour de nombreuses entreprises tournent de nos jour autour des données (bases et entrepôts de données, BigData).

@@ -1,0 +1,60 @@
+\section{Clarification conceptuelle}
+
+\subsection{Big Data}
+%Pour pouvoir, les utiliser au mieux dans son organisation et son processus décisionnel, il est essentiel de maîtriser les principes et caractéristiques clés du \textit{big data}.
+%Le \textit{big data} (donn\'ees massives), fait désormais partie du quotidien de toutes les entreprises. 
+Le terme \textit{big data} a été popularisé par John Mashey, informaticien chez Silicon Graphics dans les années 1990 \cite{Cairn_5V}. Ce dernier faisait r\'ef\'erence aux bases de données trop grandes et complexes pour être étudiées avec les méthodes statistiques traditionnelles – et, par extension, à tous les nouveaux outils d’analyse de ces données. En 2001, Douglas Laney a analysé cette nouvelle tendance à travers une liste très simple de trois \textit{« V »}, ensuite élargie à cinq \textit{« V »} \cite{Cairn_5V} \cite{Talend_5V} :
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+\item le volume : pour d\'esigner la grande quantit\'e de donn\'ees ou d'informations contenues dans ces bases de donn\'ees;
+\item la v\'elocit\'e : \'egalement appel\'ee vitesse, correspond à la rapidité à laquelle les donn\'ees sont générées, collect\'ees et circulent pour transmission et analyse;
+\item la vari\'et\'e : pour désigner la multiplicité des types de données disponibles, autrement dit les différences de natures, formats et structures \footnote{Donn\'ees structur\'ees, semi-structur\'ees ou non structur\'ees\\};
+\item la valeur :  fait r\'ef\'erence \`a la capacit\'e de ces donn\'ees \`a g\'en\'erer du profit; chaque donnée devant apporter une valeur ajoutée à l’entreprise; 
+\item la v\'eracit\'e : qui permet de garantir la qualité et la fiabilité des données.
+\end{itemize}
+
+%Ces cinq \textit{« V »} permettent donc de d\'ecrire et de caract\'eriser les \textit{big data}. 
+Nous nous intéressons ici à cette dernière caract\'eristique. En effet, pour pouvoir tirer de la valeur des donn\'ees, la qualit\'e est la condition pr\'ealable à l'analyse et à l'utilisation du \textit{big data}. D’où la nécessité de prendre des mesures de précaution pour minimiser les biais liés au manque de fiabilité des données. Les méthodes permettant d'améliorer et de garantir la qualité des \textit{big data} sont essentielles pour prendre des décisions commerciales précises, efficaces et fiables. Mais qu'est-ce qu'une donn\'ee de qualit\'e?
+
+%ainsi qu'\`a la garantie de leur valeur
+
+%Dans un contexte o\`u, le volume de données augmente de manière exponentielle, ce sont généralement les entreprises qui commencent à tirer des avantages incroyables de leurs \textit{big data}. Selon les gestionnaires et les économistes, les entreprises qui ne s’intéressent pas sérieusement au \textit{big data} risquent d’être pénalisées et écartées \cite{Lebigdata_5V}. 
+
+%de la valeur contenue dans ces donn\'ees, il leur faut avoir des donn\'ees de qualit\'es, fiables, cr\'edibles et pr\'ecises faisant ainsi r\'eference \`a la v\'eracit\'e.
+
+\subsection{Qualit\'e des donn\'ees}
+Définir la qualité des données n’est pas une op\'eration ais\'ee. On est bien souvent tent\'e de définir plut\^ot la non-qualité \cite{pwc_micro_ebg_2011}. Afin de mieux saisir cette notion, nous d\'efinirons d'abord ce qu'on entend par qualit\'e, information et donn\'ee avant de revenir sur la d\'efinition de la qualit\'e des donn\'ees en elle-m\^eme. \`A cet effet, d'apr\`es l'organisation internationale de normalisation (\acrfull{iso}) \cite{Iso8000}, la  qualit\'e pourrait se d\'efinir comme le degré auquel un ensemble de caractéristiques inhérentes à un objet répond aux exigences. On parle \'egalement de conformit\'e aux exigences. Toujours selon l'\acrshort{iso} \cite{Iso8000}, l'exigence se d\'efinit comme un besoin ou une attente énoncée; généralement implicite ou obligatoire. 
+Dans \cite{pwc_micro_ebg_2011}, on retiendra que les donn\'ees \emph{« sont des faits et des statistiques qui peuvent être quantifiées, mesurées, comptées, et stockées »} et que l'information quant \`a elle \emph{« est un ensemble de données organisées selon une ontologie\footnote{Une ontologie est l'ensemble structuré des termes et concepts représentant le sens d’un champ d'informations (wikipedia)} qui définit les relations entre certains sujets»}.\\
+
+La qualit\'e des donn\'ees pourrait donc se d\'efinir plus précisément, comme le degré auquel un ensemble de caractéristiques inhérentes aux données répond aux attentes énoncées \cite{Iso8000}. Mais plus loin, Wang et Strong(1996) cit\'es par Cai et Zhu \cite{Cai_Zhu_2015},  d\'efinissent la qualit\'e comme l'aptitude \`a l'emploi et proposent que le jugement de la qualité des données dépende des consommateurs de données. L'objectif est d'avoir \`a disposition des donn\'ees exemptes d'erreurs, d'incohérences, de redondances, de formatage médiocre et d'autres problèmes susceptibles d'empêcher une utilisation aisée \cite{PreciselyDQ}. Ces deux d\'efinitions font ressortir deux aspects tr\`es importants qui se reflètent \'egalement dans la litt\'erature. En effet, tous les auteurs s'accordent sur le fait que la qualit\'e dépend non seulement des caractéristiques propres aux donn\'ees, mais aussi de l'environnement dans lequel ces donn\'ees sont utilis\'ees.
+\\
+
+Cette perception met ainsi en exergue le caract\`ere subjectif de cette notion. Aussi peut-on lire \cite{WikiDQ}, que : 
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+\item pour le consommateur par exemple, des donn\'ees de qualit\'e sont des données : 
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+\item qui sont aptes à être utilisées ;
+\item qui répondent \`a ses attentes ou les dépassent et;
+\item  qui satisfont aux exigences de leur utilisation prévue;
+\end{itemize}
+\item il en est de m\^eme, pour l'entreprise qui de façon sp\'ecifique, inscrit cette d\'efinition dans un cadre op\'erationnel, d\'ecisionnel et commercial;
+%\begin{itemize}
+%\item  qui sont aptes à être utilisées dans leurs rôles opérationnels, décisionnels et autres prévus ou qui présentent une conformité aux normes qui ont été fixées;
+%\item  qui sont adaptées aux utilisations prévues dans le cadre des opérations, de la prise de décision et de la planification et ;
+%\item  capable de satisfaire les exigences commerciales, systémiques et techniques déclarées de l'entreprise;
+%\end{itemize}
+\item par contre, du point de vue des normes, la qualit\'e des donn\'ees est mesur\'ee par :
+\begin{itemize}[parsep=0cm,itemsep=0cm]
+\item le degré auquel un ensemble de caractéristiques (dimensions de qualité) répond aux exigences ainsi que;
+\item l'utilité, la précision et l'exactitude des données pour leur utilisation.
+\end{itemize}
+\end{itemize}
+
+Cette diversit\'e de point de vue, se justifie par le fait qu'avec l'av\`enement du \textit{big data} contrairement au pass\'e, les utilisateurs de données ne sont pas nécessairement les producteurs de ces données; renforçant de ce fait l'absence d'une d\'efinition unique. Abondant dans le m\^eme sens, sur la d\'efinition de la qualit\'e des donn\'ees, le \acrfull{niss} \cite{NISS_2001} identifie sept(7) principes cl\'es permettant de saisir sa quintessence. Ainsi, ils \'enoncent que les donn\'ees peuvent \^etre vues comme un produit et leur qualit\'e  d\'epend de multiples facteurs et qu'en principe, la qualit\'e peut \^etre  mesurée et améliorée.
+\\
+
+Plusieurs dimensions entrent en jeu dans la définition de la qualité. Chacune, décrivant des caractéristiques qui peuvent être mesurées ou évaluées par rapport à des attentes spécifiques \cite{dama}. Le caract\`ere mesurable des dimensions s'av\`ere nécessaire pour leur quantification dans la pratique. On parle alors de m\'etrique. Une métrique de qualit\'e des donn\'ees selon Ehrlinger, Rusz et Wöß \cite{ehrlinger2019survey}, est une fonction qui \`a une dimension de qualité associe une valeur numérique. Une telle métrique peut être calcul\'ee à différents niveaux d'agrégation : au niveau des valeurs, des colonnes ou des attributs, des tuples ou des enregistrements, des tables ou des relations, ainsi qu'au niveau de la base de données. S'adaptent-elles bien au \textit{big data}?
+\\
+
+\`A la faveur de cette clarification conceptuelle, on pourrait alors se demander comment mesurer ou \'evaluer la qualit\'e de nos donn\'ees? Quelles sont les dimensions qui existent et quels aspects permettent-elles de capter?
+
+
